@@ -2,6 +2,7 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+   
   
 }
 
@@ -12,10 +13,10 @@ html{
 
 
 body{
-  background:#070614;
+  background: #3e4455;
   color:white;
   min-height: 100vh;
-  overflow-x: clip;
+  overflow-x: hidden;
  
  
    
