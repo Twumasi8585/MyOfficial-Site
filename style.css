@@ -12,7 +12,7 @@ html{
 }
 
 
-/*body{
+body{
   background: #3e4455;
   color:white;
   min-height: 100vh;
@@ -20,7 +20,7 @@ html{
  
  
    
-}*/
+}
 
 
 
@@ -41,19 +41,19 @@ html{
 
 }
 
-/*.navbar{
+.navbar{
     display: flex;
     align-items: center;
     justify-content: center;
     height: 90px;
-    width: ;
+    width: 100%;
     position: sticky;
     top: 0;
     background: transparent;
     box-shadow: 0 10px 20px rgba(0,0,0,0.5);
     backdrop-filter: blur(10px);
     z-index: 999;
-}*/
+}
 
 .nav-cont{
     display: flex;
