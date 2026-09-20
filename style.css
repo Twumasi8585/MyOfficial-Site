@@ -1157,7 +1157,7 @@ color: #ffffed;
 .contact-box h3 a{
   color: #d9ff00;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .contact67 h3{
@@ -1830,7 +1830,7 @@ height:150px;
   }
 
   .timer-sec{
-      padding-top: 95%;
+      padding-top: 125%;
      
   }
 
@@ -1911,7 +1911,7 @@ height:150px;
   }
 
   .arrange1{
-    margin-left: -6%;
+    margin-left: -4%;
 
   }
    
@@ -1920,9 +1920,7 @@ height:150px;
     
   }
 
-   h3 .contact69 a{
-    margin-left: -100px;
-  }
+   
 }
 
 
