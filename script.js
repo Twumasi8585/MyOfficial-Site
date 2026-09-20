@@ -102,7 +102,7 @@ const debounce = (func, wait, immediate) => {
 
 
 
-(function () {
+/*(function () {
   // https://dashboard.emailjs.com/admin/account
   emailjs.init("JEo-dElIm-gpMfClw");
 })();
@@ -134,7 +134,7 @@ window.onload = function () {
         }
       );
     });
-};
+};*/
 
 
 
@@ -144,3 +144,182 @@ window.onload = function () {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      /*background:
+        radial-gradient(circle at 15% 20%, #ffb6d9 0, transparent 28%),
+        radial-gradient(circle at 85% 20%, #a997ff 0, transparent 30%),
+        radial-gradient(circle at 50% 100%, #6dcfff 0, transparent 32%),
+        linear-gradient(135deg, #7d70cf, #e98cb9 50%, #69bfe5);*/
+        /*background: blue;
+    }*/
+
+  
+
+
+
+
+  
+
+  
+    $(function () {
+
+      let is24Hour = false;
+      let previousDigits = {};
+
+      const $clock = $(".clock");
+
+      function pad(value) {
+        return String(value).padStart(2, "0");
+      }
+
+      function getTime() {
+        const now = new Date();
+
+        let hours = now.getHours();
+        let ampm = hours >= 12 ? "PM" : "AM";
+
+        if (!is24Hour) {
+          hours = hours % 12 || 12;
+        }
+
+        return {
+          hours: pad(hours),
+          minutes: pad(now.getMinutes()),
+          seconds: pad(now.getSeconds()),
+          ampm: ampm,
+          date: now
+        };
+      }
+
+      function createFlip($digit, newValue) {
+
+        const $card = $digit.find(".cart7");
+
+        const oldValue =
+          $card.find(".digit-number").first().text();
+
+        if (oldValue === newValue) {
+          return;
+        }
+
+        // Remove an old animation if it exists.
+        $card.find(".flip").remove();
+
+        // Create the animated top half.
+        const $flip = $("<div>", {
+          class: "flip"
+        });
+
+        const $number = $("<span>", {
+          class: "digit-number",
+          text: oldValue
+        });
+
+        $flip.append($number);
+        $card.append($flip);
+
+        // Update the static number behind it.
+        $card.find(".digit-number").not($flip.find(".digit-number"))
+          .text(newValue);
+
+        // Force browser reflow before animation.
+        void $flip[0].offsetWidth;
+
+        $flip.addClass("animate");
+
+        // Clean up after animation.
+        setTimeout(function () {
+          $flip.remove();
+        }, 560);
+      }
+
+      function updateClock() {
+
+        const time = getTime();
+
+        const digits = {
+          hour1: time.hours.charAt(0),
+          hour2: time.hours.charAt(1),
+          minute1: time.minutes.charAt(0),
+          minute2: time.minutes.charAt(1),
+          second1: time.seconds.charAt(0),
+          second2: time.seconds.charAt(1)
+        };
+
+        $.each(digits, function (unit, value) {
+
+          const $digit = $('[data-unit="' + unit + '"]');
+
+          if (
+            previousDigits[unit] !== undefined &&
+            previousDigits[unit] !== value
+          ) {
+            createFlip($digit, value);
+          } else {
+            $digit.find(".digit-number").text(value);
+          }
+
+          previousDigits[unit] = value;
+        });
+
+        $(".ampm").text(time.ampm);
+
+        const dateString = time.date.toLocaleDateString(
+          undefined,
+          {
+            weekday: "long",
+            month: "long",
+            day: "numeric",
+            year: "numeric"
+          }
+        );
+
+        $(".date").text(dateString);
+
+        $(".ampm").toggle(!is24Hour);
+      }
+
+      $(".tog3").on("click", function () {
+
+        is24Hour = !is24Hour;
+
+        // Reset digit tracking so the newly formatted hour
+        // doesn't produce an awkward transition.
+        previousDigits = {};
+
+        $(this).text(
+          is24Hour
+            ? "Switch to 12-hour"
+            : "Switch to 24-hour"
+        );
+
+        updateClock();
+      });
+
+      updateClock();
+
+      // Update frequently enough to keep the display synchronized.
+      setInterval(updateClock, 250);
+
+    });
+  
