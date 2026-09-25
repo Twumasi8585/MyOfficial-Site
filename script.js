@@ -112,37 +112,7 @@ const debounce = (func, wait, immediate) => {
 
 
 
-
-
-
-
-
-
-    /*body {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      font-family: "Segoe UI", Arial, sans-serif;
-      color: var(--text);
-      /*background:
-        radial-gradient(circle at 15% 20%, #ffb6d9 0, transparent 28%),
-        radial-gradient(circle at 85% 20%, #a997ff 0, transparent 30%),
-        radial-gradient(circle at 50% 100%, #6dcfff 0, transparent 32%),
-        linear-gradient(135deg, #7d70cf, #e98cb9 50%, #69bfe5);*/
-        /*background: blue;
-    }*/
-
-  
-
-
-
-
-  
-
-  
-    $(function () {
+$(function () {
 
       let is24Hour = false;
       let previousDigits = {};
@@ -283,4 +253,67 @@ const debounce = (func, wait, immediate) => {
       setInterval(updateClock, 250);
 
     });
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      /*background:
+        radial-gradient(circle at 15% 20%, #ffb6d9 0, transparent 28%),
+        radial-gradient(circle at 85% 20%, #a997ff 0, transparent 30%),
+        radial-gradient(circle at 50% 100%, #6dcfff 0, transparent 32%),
+        linear-gradient(135deg, #7d70cf, #e98cb9 50%, #69bfe5);*/
+        /*background: blue;
+    }*/
+
+  
+
+
+
+
+  
+
+  
+    
   
