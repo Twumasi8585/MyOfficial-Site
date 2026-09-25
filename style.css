@@ -22,7 +22,7 @@ html{
 
 
 body{
-  background: #3e4455;
+  background: #070614;
   color:white;
   min-height: 100vh;
   overflow-x: hidden;
@@ -201,7 +201,7 @@ filter: grayscale(0.2) contrast(1.1);
 }
 
 /* Decorative background bubbles */
-    .bubble {
+    /*.bubble {
       position: fixed;
       border-radius: 50%;
       pointer-events: none;
@@ -243,7 +243,7 @@ filter: grayscale(0.2) contrast(1.1);
       50% {
         transform: translateY(-18px) scale(1.05);
       }
-    }
+    }*/
 
     /*.clock-container {
       width: min(92vw, 500px);
@@ -808,7 +808,6 @@ background-color: #070614;
 .brand-topbar {
   width: 100%;
   padding: 28px 4vw;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -851,7 +850,6 @@ background-color: #070614;
   width: 16px;
   height: 1px;
   background: var(--brand-text);
-
   transition: transform 0.3s ease;
 }
 
@@ -878,7 +876,6 @@ background-color: #070614;
   display: block;
   color: #ffffed;
   margin-bottom: 10px;
-
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -1014,16 +1011,12 @@ background-color: #070614;
 .brand-dot {
   width: 7px;
   height: 7px;
-
   padding: 0;
   border: 0;
   border-radius: 50%;
-
-  background: #555;
-
-  cursor: pointer;
-
-  transition:
+ background: #555;
+ cursor: pointer;
+ transition:
     width 0.3s ease,
     background 0.3s ease;
 }
@@ -1042,18 +1035,14 @@ background-color: #070614;
 
 .brand-visual {
   position: relative;
-
   width: 100%;
   min-height: 500px;
-
   overflow: hidden;
-
   background: #191919;
 }
 
 .brand-image-track {
   position: relative;
-
   width: 100%;
   height: 100%;
   min-height: 500px;
@@ -1089,12 +1078,9 @@ background-color: #070614;
 
 .brand-visual::after {
   content: "";
-
   position: absolute;
   inset: 0;
-
   pointer-events: none;
-
   background:
     linear-gradient(
       135deg,
@@ -1292,10 +1278,6 @@ footer h5{
 
         }
 
-        .arrange3{
-          margin-left: px;
-        }
-
         .arrange1{
           margin-left: 90px;
         }
@@ -1303,47 +1285,9 @@ footer h5{
         .hero-content p{
           text-align: center;
         }
+
         }
 
-
-
-
-/*@media screen and (min-width: 1024px) {
-
-
-
-  .slider__body {
-    flex-direction: row;
-  }
-
-  .slider__left {
-    width: 55%;
-    flex-shrink: 0;
-    z-index: auto;
-  }
-
-  .slider__right {
-    position: static;
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 0;
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  .slider__slide {
-    width: 68%;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .slider__slide,
-  .slider__title span {
-    will-change: auto;
-  }
-}*/
 
 
 
@@ -1384,11 +1328,6 @@ height:150px;
     width: 400px;
 }
 
-.arrange4{
-  margin-top: 20px;
-  margin-right: 100px;
-  width: 360px;
-}
 
 }
 
@@ -1525,33 +1464,6 @@ height:150px;
 }
 
 
-/*@media screen and (min-width: 768px) {
-  .slider__header {
-    padding: 40px 56px;
-  }
-
-  .slider__label {
-    display: flex;
-  }
-
-  .slider__body {
-    padding: 0 56px 56px;
-  }
-
-  .slider__footer {
-    margin-top: 48px;
-  }
-
-  .slider__slide {
-    width: 60%;
-  }
-
-  .slider__cursor {
-    width: 88px;
-    height: 88px;
-  }
-}*/
-
 @media (max-width: 700px) {
 
 
@@ -1646,17 +1558,15 @@ height:150px;
         bottom: 20px;
       }
 
-       .slider{
+ .slider{
           width: min(90%, 500px);
           margin-left: -1px;
 
         }
 
-
-
-
-
-    
+  .navigation{
+    margin-top: 50%;
+  }      
 
 
   #brandShowcase {
