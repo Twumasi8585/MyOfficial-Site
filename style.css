@@ -1606,7 +1606,9 @@ height:150px;
 
 @media (max-width: 600px) {
 
-
+ .profile{
+  margin-top: 60px;
+ }
 
   .hero-content h1{
     font-size: 35px;
@@ -1624,7 +1626,7 @@ height:150px;
   }
 
   .timer-sec{
-      padding-top: 145%;
+      padding-top: 160%;
      
   }
 
@@ -1645,7 +1647,7 @@ height:150px;
       }
 
        .slider{
-          width: min(80%, 500px);
+          width: min(90%, 500px);
           margin-left: -1px;
 
         }
