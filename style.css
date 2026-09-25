@@ -1606,13 +1606,9 @@ height:150px;
 
 @media (max-width: 600px) {
 
-.container1{
-  margin-top: 20px;
-}
-
- .profile{
-  margin-top: 60px;
- }
+  .hero-content{
+    margin-top: 50px;
+  }
 
   .hero-content h1{
     font-size: 35px;
