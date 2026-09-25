@@ -1606,6 +1606,10 @@ height:150px;
 
 @media (max-width: 600px) {
 
+.container1{
+  margin-top: 20px;
+}
+
  .profile{
   margin-top: 60px;
  }
