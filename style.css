@@ -507,7 +507,6 @@ background-color: #070614;
       overflow: hidden;
       border-radius: 12px;
       background: #222;
-      /*margin-left: 280px;*/
       left: 25%;
       margin-bottom: 100px;
       
@@ -1256,7 +1255,7 @@ footer h5{
   }
  
 
-  .Marc3 {
+  /*.Marc3 {
         width: 100%;
         border-radius: 0;
       }
@@ -1269,7 +1268,7 @@ footer h5{
 
 .Marc5 {
         bottom: 20px;
-      }
+      }*/
 
 
   .slider{
@@ -1353,7 +1352,7 @@ height:150px;
   }
 
 
-.Marc3 {
+/*.Marc3 {
         width: 100%;
         border-radius: 0;
       }
@@ -1372,7 +1371,7 @@ height:150px;
 
       .slider{
         margin-left: 80px;
-      }
+      }*/
 
 
   .brand-content {
@@ -1542,7 +1541,7 @@ height:150px;
      
   }
 
-.Marc3 {
+/*.Marc3 {
         width: 100%;
         border-radius: 0;
       }
@@ -1564,9 +1563,9 @@ height:150px;
 
         }
 
-  .navigation{
+  /*.navigation{
     margin-top: 40%;
-  }      
+  }*/      
 
 
   #brandShowcase {
@@ -1742,6 +1741,169 @@ height:250px;
 
 }
 
+
+
+
+
+@media (min-width: 1200px) {
+
+  .Marc1 {
+    width: min(700px, 80vw);
+
+    border-radius: 16px;
+  }
+
+  .Marc5 {
+    bottom: 20px;
+
+    gap: 9px;
+
+    padding: 9px 14px;
+  }
+
+  .Marc5 label {
+    width: 11px;
+    height: 11px;
+  }
+}
+
+
+/* =========================================
+   LAPTOP / SMALL DESKTOP
+   769px - 1199px
+   ========================================= */
+
+@media (min-width: 769px) and (max-width: 1199px) {
+
+  .Marc1 {
+    width: min(650px, 85vw);
+
+    margin-top: 35px;
+  }
+
+}
+
+
+/* =========================================
+   TABLET
+   481px - 768px
+   ========================================= */
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+  .Marc1 {
+    width: calc(100% - 40px);
+
+    max-width: 620px;
+
+    margin: 30px auto 80px;
+
+    border-radius: 12px;
+  }
+
+  .Marc5 {
+    bottom: 14px;
+
+    gap: 7px;
+
+    padding: 7px 10px;
+  }
+
+  .Marc5 label {
+    width: 9px;
+    height: 9px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   320px - 480px
+   ========================================= */
+
+@media (max-width: 480px) {
+
+  .Marc1 {
+    /*
+     * Leaves 12px space on both sides.
+     */
+    width: calc(100% - 24px);
+
+    max-width: none;
+
+    margin: 20px auto 60px;
+
+    border-radius: 10px;
+  }
+
+  .Marc5 {
+    bottom: 10px;
+
+    gap: 5px;
+
+    padding: 6px 8px;
+
+    /*
+     * Make sure the dots never overflow.
+     */
+    max-width: calc(100% - 16px);
+  }
+
+  .Marc5 label {
+    width: 7px;
+    height: 7px;
+  }
+
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+   320px and below
+   ========================================= */
+
+@media (max-width: 320px) {
+
+  .Marc1 {
+    width: calc(100% - 16px);
+
+    border-radius: 8px;
+
+    margin-top: 15px;
+  }
+
+  .Marc5 {
+    bottom: 7px;
+
+    gap: 4px;
+
+    padding: 5px 7px;
+  }
+
+  .Marc5 label {
+    width: 6px;
+    height: 6px;
+  }
+
+}
+
+
+/* =========================================
+   REDUCE MOTION
+   Accessibility
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .Marc3 {
+    transition: none;
+  }
+
+  .Marc5 label {
+    transition: none;
+  }
+
+}
 
 
  
