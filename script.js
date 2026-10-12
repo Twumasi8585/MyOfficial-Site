@@ -323,63 +323,63 @@ SLIDE DATA
 
 const gallerySlides = [
 {
-image: "1.jpg",
-title: "Mountain Escape",
-description: "Exploring dramatic landscapes and quiet places."
+image: "Flyer1.png",
+/*title: "Mountain Escape",
+description: "Exploring dramatic landscapes and quiet places."*/
 },
 
 {
-image: "2.jpg",
-title: "Ocean Blue",
-description: "A calm collection inspired by the sea."
+image: "Flyer4.png",
+/*title: "Ocean Blue",
+description: "A calm collection inspired by the sea."*/
 },
 
 {
-image: "3.jpg",
-title: "Modern Space",
-description: "Architecture, geometry and contemporary design."
+image: "Flyer3.png",
+/*title: "Modern Space",
+description: "Architecture, geometry and contemporary design."*/
 },
 
 {
-image: "4.jpg",
-title: "Serene Woods",
-description: "Natural textures surrounded by deep green."
+image: "Flyer5.png",
+/*title: "Serene Woods",
+description: "Natural textures surrounded by deep green."*/
 },
 
 {
-image: "5.jpg",
-title: "The Bride",
-description: "A visual journey through untouched landscapes."
+image: "Flyer6.png",
+/*title: "The Bride",
+description: "A visual journey through untouched landscapes."*/
 },
 
 {
-image: "6.jpg",
-title: "The Groom",
-description: "Leaving the familiar behind and discovering more."
+image: "Flyer7.png",
+/*title: "The Groom",
+description: "Leaving the familiar behind and discovering more."*/
 },
 
 {
-image: "7.jpg",
-title: "New Horizons",
-description: "Finding new perspectives beyond the familiar."
+image: "Flyer8.png",
+/*title: "New Horizons",
+description: "Finding new perspectives beyond the familiar."*/
 },
 
 {
-image: "8.jpg",
-title: "Happy Smiles",
-description: "Minimal landscapes shaped by light and shadow."
+image: "Flyer9.png",
+/*title: "Happy Smiles",
+description: "Minimal landscapes shaped by light and shadow."*/
 },
 
 {
-image: "9.jpg",
-title: "Beautiful Journey",
-description: "A final collection of moments worth remembering."
+image: "Fashion WD.jpg",
+/*title: "Beautiful Journey",
+description: "A final collection of moments worth remembering."*/
 },
 
 {
-image: "10.jpg",
-title: "Love",
-description: "A final collection of moments worth remembering."
+image: "AgricTech WD2.jpg",
+/*title: "Love",
+description: "A final collection of moments worth remembering."*/
 }
 
 
