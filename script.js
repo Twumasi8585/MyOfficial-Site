@@ -1,42 +1,4 @@
-
-const slides = document.querySelector(".slides");
-if(slides){
-
-const images = document.querySelectorAll(".slides img");
-const next = document.querySelector(".next");
-const prev = document.querySelector(".prev");
-
-let index = 0;
-
-function showSlide(i){
-if(i >= images.length) index = 0;
-if(i < 0) index = images.length-1;
-slides.style.transform = `translateX(-${index*100}%)`;
-
-}
-
-next.addEventListener("click", ()=>{
-index++;
-showSlide(index);
-
-});
-
-prev.addEventListener("click", ()=>{
-index--;
-showSlide(index);
-
-});
-
-setInterval(()=>{
-index++;
-showSlide(index);
-
-},3000);
-
-}
-
-
-
+/* Navbar Toggle Script  */
 
 
 const navbarToggle = document.querySelector(".toggle");
@@ -55,60 +17,8 @@ navbarToggle.addEventListener('click', () => {
 
 
 
-const throttle = (callback, limit) => {
-  let waiting = false;
-  return function () {
-    if (!waiting) {
-      callback.apply(this, arguments);
-      waiting = true;
-      setTimeout(() => {
-        waiting = false;
-      }, limit);
-    }
-  };
-};
 
-const debounce = (func, wait, immediate) => {
-  let timeout;
-  return function () {
-    const context = this;
-    const args = arguments;
-    const later = function () {
-      timeout = null;
-      if (!immediate) func.apply(context, args);
-    };
-    const callNow = immediate && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-    if (callNow) func.apply(context, args);
-  };
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*  Clock Script */ 
 
 
 
@@ -260,59 +170,11 @@ $(function () {
 
 
 
+    
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /*body {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      font-family: "Segoe UI", Arial, sans-serif;
-      color: var(--text);
-      /*background:
-        radial-gradient(circle at 15% 20%, #ffb6d9 0, transparent 28%),
-        radial-gradient(circle at 85% 20%, #a997ff 0, transparent 30%),
-        radial-gradient(circle at 50% 100%, #6dcfff 0, transparent 32%),
-        linear-gradient(135deg, #7d70cf, #e98cb9 50%, #69bfe5);*/
-        /*background: blue;
-    }*/
-
-
-
-
-
-
-
+/* Portfolio B Script */
 
 
 
@@ -371,13 +233,13 @@ description: "Minimal landscapes shaped by light and shadow."*/
 },
 
 {
-image: "Fashion WD.jpg",
+image: "Flyer10.jpg",
 /*title: "Beautiful Journey",
 description: "A final collection of moments worth remembering."*/
 },
 
 {
-image: "AgricTech WD2.jpg",
+image: "Flyer2.jpg",
 /*title: "Love",
 description: "A final collection of moments worth remembering."*/
 }
