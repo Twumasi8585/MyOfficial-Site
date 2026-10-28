@@ -1893,6 +1893,23 @@ html {
     margin-top: 50%;
   }
 
+  .hero-content h1{
+    color: #fffedd;
+    font-size: 30px;
+}
+
+.hero-content h3{
+    color: #d9ff00;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.hero-content p{
+    color: #fffedd;
+    margin-top: 5px;
+    font-size: 17px;
+}
+
   #Portfolio {
     min-height: auto;
     padding-top: 15px;
