@@ -1891,6 +1891,8 @@ html {
 
   .profile{
     margin-top: 50%;
+    width: 70px;
+    height: 70px;
   }
 
   .hero-content h1{
