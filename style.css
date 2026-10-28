@@ -1389,6 +1389,10 @@ footer h5{
 
 @media (max-width: 600px) {
 
+.profile{
+   margin-top: 50%;
+}
+
   .hero-content{
     margin-top: 70px;
   }
