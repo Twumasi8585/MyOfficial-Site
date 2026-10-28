@@ -13,158 +13,51 @@ navbarToggle.addEventListener('click', () => {
 
 
 
+/* Date Script */
 
 
 
+  
+        // Get the paragraph element
+        const dateElement = document.getElementById("A");
 
+        // Function to add the correct ordinal suffix
+        function getOrdinal(day) {
+            if (day >= 11 && day <= 13) {
+                return "th";
+            }
 
-/*  Clock Script */ 
-
-
-
-$(function () {
-
-      let is24Hour = false;
-      let previousDigits = {};
-
-      const $clock = $(".clock");
-
-      function pad(value) {
-        return String(value).padStart(2, "0");
-      }
-
-      function getTime() {
-        const now = new Date();
-
-        let hours = now.getHours();
-        let ampm = hours >= 12 ? "PM" : "AM";
-
-        if (!is24Hour) {
-          hours = hours % 12 || 12;
+            switch (day % 10) {
+                case 1: return "st";
+                case 2: return "nd";
+                case 3: return "rd";
+                default: return "th";
+            }
         }
 
-        return {
-          hours: pad(hours),
-          minutes: pad(now.getMinutes()),
-          seconds: pad(now.getSeconds()),
-          ampm: ampm,
-          date: now
-        };
-      }
+        // Function to display the current date
+        function displayDate() {
+            const today = new Date();
 
-      function createFlip($digit, newValue) {
+            const weekday = today.toLocaleDateString("en-GB", {
+                weekday: "long"
+            });
 
-        const $card = $digit.find(".cart7");
+            const month = today.toLocaleDateString("en-GB", {
+                month: "long"
+            });
 
-        const oldValue =
-          $card.find(".digit-number").first().text();
+            const day = today.getDate();
+            const year = today.getFullYear();
 
-        if (oldValue === newValue) {
-          return;
+            // Build the formatted date
+            dateElement.textContent =
+                `${weekday}, ${day}${getOrdinal(day)} ${month} ${year}`;
         }
 
-        // Remove an old animation if it exists.
-        $card.find(".flip").remove();
+        // Run the function
+        displayDate();
 
-        // Create the animated top half.
-        const $flip = $("<div>", {
-          class: "flip"
-        });
-
-        const $number = $("<span>", {
-          class: "digit-number",
-          text: oldValue
-        });
-
-        $flip.append($number);
-        $card.append($flip);
-
-        // Update the static number behind it.
-        $card.find(".digit-number").not($flip.find(".digit-number"))
-          .text(newValue);
-
-        // Force browser reflow before animation.
-        void $flip[0].offsetWidth;
-
-        $flip.addClass("animate");
-
-        // Clean up after animation.
-        setTimeout(function () {
-          $flip.remove();
-        }, 560);
-      }
-
-      function updateClock() {
-
-        const time = getTime();
-
-        const digits = {
-          hour1: time.hours.charAt(0),
-          hour2: time.hours.charAt(1),
-          minute1: time.minutes.charAt(0),
-          minute2: time.minutes.charAt(1),
-          second1: time.seconds.charAt(0),
-          second2: time.seconds.charAt(1)
-        };
-
-        $.each(digits, function (unit, value) {
-
-          const $digit = $('[data-unit="' + unit + '"]');
-
-          if (
-            previousDigits[unit] !== undefined &&
-            previousDigits[unit] !== value
-          ) {
-            createFlip($digit, value);
-          } else {
-            $digit.find(".digit-number").text(value);
-          }
-
-          previousDigits[unit] = value;
-        });
-
-        $(".ampm").text(time.ampm);
-
-        const dateString = time.date.toLocaleDateString(
-          undefined,
-          {
-            weekday: "long",
-            month: "long",
-            day: "numeric",
-            year: "numeric"
-          }
-        );
-
-        $(".date").text(dateString);
-
-        $(".ampm").toggle(!is24Hour);
-      }
-
-      $(".tog3").on("click", function () {
-
-        is24Hour = !is24Hour;
-
-        // Reset digit tracking so the newly formatted hour
-        // doesn't produce an awkward transition.
-        previousDigits = {};
-
-        $(this).text(
-          is24Hour
-            ? "Switch to 12-hour"
-            : "Switch to 24-hour"
-        );
-
-        updateClock();
-      });
-
-      updateClock();
-
-      // Update frequently enough to keep the display synchronized.
-      setInterval(updateClock, 250);
-
-    });
-
-   
 
 
 
