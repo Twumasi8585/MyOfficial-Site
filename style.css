@@ -1889,6 +1889,10 @@ html {
   and (orientation: landscape) {
 
 
+  .profile{
+    margin-top: 50%;
+  }
+
   #Portfolio {
     min-height: auto;
     padding-top: 15px;
