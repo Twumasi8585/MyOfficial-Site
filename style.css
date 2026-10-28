@@ -1891,8 +1891,8 @@ html {
 
   .profile{
     margin-top: 50%;
-    width: 70px;
-    height: 70px;
+    width: 90px;
+    height: 90px;
   }
 
   .hero-content h1{
@@ -1909,7 +1909,7 @@ html {
 .hero-content p{
     color: #fffedd;
     margin-top: 5px;
-    font-size: 3px;
+    font-size: 10px;
 }
 
   #Portfolio {
