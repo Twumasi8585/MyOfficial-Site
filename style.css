@@ -1891,8 +1891,8 @@ html {
 
   .profile{
     margin-top: 50%;
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
   }
 
   .hero-content h1{
@@ -1909,8 +1909,16 @@ html {
 .hero-content p{
     color: #fffedd;
     margin-top: 5px;
-    font-size: 10px;
+    font-size: 13px;
 }
+
+#A{
+  margin-top: 13px;
+  font-size: 25px;
+  
+                                                
+}
+
 
   #Portfolio {
     min-height: auto;
