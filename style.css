@@ -1898,6 +1898,7 @@ html {
   .hero-content h1{
     color: #fffedd;
     font-size: 30px;
+    margin-top: -10px;
 }
 
 .hero-content h3{
@@ -1915,7 +1916,7 @@ html {
 #A{
   
   font-size: 17px;
-  margin-bottom:-5%;
+ 
   
                                                 
 }
